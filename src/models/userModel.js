@@ -30,8 +30,8 @@ isAdmin:{
 },
 
 
-forgotPaaswordToken:String,
-forgotPaaswordTokenTokenExpiry:Date,
+forgotPasswordToken:String,
+forgotPasswordTokenTokenExpiry:Date,
 verifyToken:String,
 verifyTokenExpiry:Date, 
 })
