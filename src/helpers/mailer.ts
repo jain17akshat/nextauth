@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer"
-import User from "@models/userModel"
+import User from "@/models/userModel"
 import bcryptjs from "bcryptjs"
-export const sendEmail=async({email,emailType,userType})=>{
+export const sendEmail=async({email,emailType,userId})=>{
     try {
 
 const hashedToken=await bcryptjs.hash(userId.toString(),10)
@@ -26,7 +26,7 @@ var transport = nodemailer.createTransport({
 });
           const mailOptions={
             from: 'akshat@akshat.ai',
-            to: "email",
+            to: email,
             subject: "emailType==='VERIFY"?"Verify your email" : "RESET YOUR PASSWORD",
             html: `<p>Click <a href="${process.env.DOMAIN}/verifyemail?token=${hashedToken}">here</a> to ${emailType === "VERIFY" ? "verify your email" : "reset your password"}
             or copy and paste the link below in your browser. <br> ${process.env.DOMAIN}/verifyemail?token=${hashedToken}

@@ -7,7 +7,7 @@ import {sendEmail} from '@/helpers/mailer'
 connect()
 export async function POST(request:NextRequest){
     try {
-       const reqBody= request.json()
+       const reqBody= await request.json()
        const {username,email,password}=reqBody
        console.log(reqBody);
 
@@ -29,8 +29,8 @@ export async function POST(request:NextRequest){
 await sendEmail({email,emailType:"VERIFY",userId:savedUser._id})
 
 return NextResponse.json({
-    message:"User registered successfully"
-    success:true
+    message:"User registered successfully",
+    success:true,
     savedUser
 })
 

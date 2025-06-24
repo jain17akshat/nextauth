@@ -1,5 +1,5 @@
-import mongoose form "mongoose";
-const userScehma=new mongoose.Schema({
+import mongoose from "mongoose";
+const userSchema=new mongoose.Schema({
 username:
 {
     type:String,
@@ -36,5 +36,5 @@ verifyToken:String,
 verifyTokenExpiry:Date, 
 })
 
-const User= mongoose.models.users|| mongoose.model("uers",userScehma)
+const User= mongoose.models.users|| mongoose.model("users",userSchema)
 export default User
