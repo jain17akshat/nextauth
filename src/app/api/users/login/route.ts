@@ -32,7 +32,18 @@ const tokenData={
     email: user.email
 }
 
-const token=await jwt.sign(tokenData,process.env.TOKEN_SECRET)
+const token=await jwt.sign(tokenData,process.env.TOKEN_SECRET!,{expiresIn:'1d'})
+NextResponse.json(
+{
+    message:"Logged In Success",
+    success:true
+})
+response.cookies.set("token",token,{
+    httpOnly:true
+})
+
+return response
+
 
  } catch (error) {
     return NextResponse.json({error:error.message},{status:500})
