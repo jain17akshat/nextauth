@@ -33,7 +33,7 @@ const tokenData={
 }
 
 const token=await jwt.sign(tokenData,process.env.TOKEN_SECRET!,{expiresIn:'1d'})
-NextResponse.json(
+const response=NextResponse.json(
 {
     message:"Logged In Success",
     success:true
