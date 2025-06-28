@@ -49,7 +49,7 @@ return (
       <hr />
       <label htmlFor="username">username</label>
       <input 
-      className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+      className="p-2 border border-green-600 rounded-lg mb-4 focus:outline-none focus:border-blue-600 text-white"
           id="username"
           type="text"
           value={user.username}
@@ -58,7 +58,7 @@ return (
           />
       <label htmlFor="email">email</label>
       <input 
-      className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+      className="p-2 border border-green-600 rounded-lg mb-4 focus:outline-none focus:border-blue-600 text-white"
           id="email"
           type="text"
           value={user.email}
@@ -67,7 +67,7 @@ return (
           />
       <label htmlFor="password">password</label>
       <input 
-      className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+      className="p-2 border border-green-600 rounded-lg mb-4 focus:outline-none focus:border-blue-600 text-white"
           id="password"
           type="password"
           value={user.password}
@@ -76,7 +76,7 @@ return (
           />
           <button
           onClick={onSignup}
-          className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">{buttonDisabled ? "No signup" : "Signup"}</button>
+          className="p-2 border border-green-600 rounded-lg mb-4 focus:outline-none focus:border-blue-600">{buttonDisabled ? "No signup" : "Signup"}</button>
           <Link href="/login">Visit login page</Link>
       </div>
   )
